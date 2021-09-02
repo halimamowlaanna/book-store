@@ -31,10 +31,11 @@ const displaySearchResult = books => {
         // console.log(book);
         const div = document.createElement('div');
         div.classList.add('col');
+        const url =`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
         div.innerHTML = `
         
           <div class="card h-100 card-property text-white ">
-            <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top book-cover mx-auto" alt="..." />
+            <img src="${url}" class="card-img-top book-cover mx-auto" alt="..." />
             <div class="card-body">
               <h5 class="card-title">${book.title}</h5>
               <p class="card-text"><span class="text-common fw-bold">Author:</span> ${book.author_name}</p>
@@ -44,8 +45,8 @@ const displaySearchResult = books => {
             </div>
           </div>
         
-        `
-        searchResult.appendChild(div)
+        `;
+        searchResult.appendChild(div);
     });
 
 }
