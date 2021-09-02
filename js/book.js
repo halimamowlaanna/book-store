@@ -28,7 +28,7 @@ const displaySearchResult = books => {
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
     books.forEach(book => {
-        // console.log(book);
+        console.log(book);
         const div = document.createElement('div');
         div.classList.add('col');
         const url =`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
@@ -39,6 +39,7 @@ const displaySearchResult = books => {
             <div class="card-body">
               <h5 class="card-title">${book.title}</h5>
               <p class="card-text"><span class="text-common fw-bold">Author:</span> ${book.author_name}</p>
+              <p class="card-text"><span class="text-common fw-bold">Publisher:</span> ${book.publisher}</p>
             </div>
             <div class="card-footer text-center">
               <small>First Publish Date:${book.first_publish_year}</small>
