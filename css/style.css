@@ -1,0 +1,14 @@
+.bg-color {
+  background-color: rgb(174, 184, 238);
+}
+.card-bg-color {
+  background-color: rgb(120, 97, 131);
+}
+.book-cover {
+  height: 250px;
+  width: 75%;
+  padding: 20px;
+}
+.text-common {
+  color: navy;
+}

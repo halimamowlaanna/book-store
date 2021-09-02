@@ -5,6 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Archive</title>
+    <!-- bootstrap stylesheet  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- local stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body class="bg-color">
+    <header></header>
+    <!--================================ main start ==============================-->
+    <main class="container">
+      <h2 class="text-center text-common pt-5 fw-bold">BOI BAZAR</h2>
+      <!-- book search area -->
+      <div class="input-group mb-3 w-50 mx-auto">
+        <input
+          type="text"
+          class="form-control"
+          id="search-field"
+          placeholder="Search the book you want"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-outline-dark"
+          type="button"
+          id="button-search"
+          onclick="searchBooks()"
+        >
+          Search
+        </button>
+      </div>
+      <!-- book search result -->
+      <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- <div class="col">
+          <div class="card h-100">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Book Name</h5>
+              <p class="card-text">Author:</p>
+            </div>
+            <div class="card-footer text-center">
+              <small class="text-muted">First Publish Date:2/2/2021</small>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+    <!--================================ main end ======================================-->
+    <footer>
+      <!-- <p class="text-center">&copy All rights reseved by Halima Mowla</p> -->
+    </footer>
+
+    <!-- bootstrap script link-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- local script link-->
+    <script src="js/book.js"></script>
+  </body>
 </html>
