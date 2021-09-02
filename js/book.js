@@ -10,16 +10,30 @@ const searchBooks = () => {
     .then(data => displaySearchResult(data.docs));
 }
 const displaySearchResult = books => {
-    // console.log(books);
+    
+    //count
+    const count = document.getElementById("count");
+    
+    count.textContent = '';
+    const h6 = document.createElement('h6');
+    if(books.length === 0 ){
+        h6.innerHTML = `<span class="text-danger fw-bold">no result found</span>`;
+    }
+    else{
+        h6.innerHTML = `Total item: ${books.length}`;
+    }
+    // h6.innerHTML = `Total item: ${books.length}`;
+    count.appendChild(h6);
+    //search result
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
     books.forEach(book => {
-        console.log(book);
+        // console.log(book);
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
         
-          <div class="card h-100 card-bg-color text-white ">
+          <div class="card h-100 card-property text-white ">
             <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top book-cover mx-auto" alt="..." />
             <div class="card-body">
               <h5 class="card-title">${book.title}</h5>

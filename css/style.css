@@ -1,8 +1,9 @@
 .bg-color {
   background-color: rgb(174, 184, 238);
 }
-.card-bg-color {
+.card-property {
   background-color: rgb(120, 97, 131);
+  margin-top: 50px;
 }
 .book-cover {
   height: 250px;
@@ -12,3 +13,6 @@
 .text-common {
   color: navy;
 }
+/* #search-result {
+  margin-bottom: 50px;
+} */
